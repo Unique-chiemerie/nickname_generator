@@ -27,10 +27,11 @@ class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black12,
       body: Column(
         children: [
           const SizedBox(
-            height: 3,
+            height: 30,
           ),
           const Text(
             'NICK-GEN',
