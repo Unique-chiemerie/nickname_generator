@@ -22,11 +22,6 @@ class MainApp extends StatefulWidget {
 class _MainAppState extends State<MainApp> {
   List<String> finalnames = [];
 //this is the function that does the magic
-  void generate(int index) {
-    finalnames.add(
-      adjectives[Random().nextInt(34)] + mainname[Random().nextInt(30)],
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,8 +44,13 @@ class _MainAppState extends State<MainApp> {
           ),
           const Spacer(),
           ElevatedButton(
-            onPressed: () {},
-            child: Text('Generate'),
+            onPressed: () {
+              finalnames.add(
+                adjectives[Random().nextInt(34)] +
+                    mainname[Random().nextInt(30)],
+              );
+            },
+            child: const Text('Generate'),
           ),
         ],
       ),
