@@ -1,3 +1,5 @@
+import 'dart:math';
+import 'nicknames.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,11 +20,39 @@ class MainApp extends StatefulWidget {
 }
 
 class _MainAppState extends State<MainApp> {
+  List<String> finalnames = [];
+//this is the function that does the magic
+  void generate(int index) {
+    finalnames.add(
+      adjectives[Random().nextInt(34)] + mainname[Random().nextInt(30)],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        children: [],
+        children: [
+          SizedBox(
+            height: 300,
+            width: double.infinity,
+            child: ListView.builder(
+              itemCount: finalnames.length,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  title: Text(
+                    finalnames[Random().nextInt(30)],
+                  ),
+                );
+              },
+            ),
+          ),
+          const Spacer(),
+          ElevatedButton(
+            onPressed: () {},
+            child: Text('Generate'),
+          ),
+        ],
       ),
     );
   }
