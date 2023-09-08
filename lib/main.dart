@@ -1,4 +1,6 @@
 import 'dart:math';
+import 'package:nickname_generator/custom%20widgets/tile.dart';
+
 import 'nicknames.dart';
 import 'package:flutter/material.dart';
 
@@ -28,16 +30,17 @@ class _MainAppState extends State<MainApp> {
     return Scaffold(
       body: Column(
         children: [
+          const SizedBox(
+            height: 70,
+          ),
           SizedBox(
             height: 300,
             width: double.infinity,
             child: ListView.builder(
               itemCount: finalnames.length,
               itemBuilder: (context, index) {
-                return ListTile(
-                  title: Text(
-                    finalnames[index],
-                  ),
+                return TilE(
+                  tex: finalnames[index],
                 );
               },
             ),
