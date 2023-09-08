@@ -36,7 +36,7 @@ class _MainAppState extends State<MainApp> {
               itemBuilder: (context, index) {
                 return ListTile(
                   title: Text(
-                    finalnames[Random().nextInt(30)],
+                    finalnames[index],
                   ),
                 );
               },
@@ -45,10 +45,12 @@ class _MainAppState extends State<MainApp> {
           const Spacer(),
           ElevatedButton(
             onPressed: () {
-              finalnames.add(
-                adjectives[Random().nextInt(34)] +
-                    mainname[Random().nextInt(30)],
-              );
+              setState(() {
+                finalnames.add(
+                  adjectives[Random().nextInt(34)] +
+                      mainname[Random().nextInt(30)],
+                );
+              });
             },
             child: const Text('Generate'),
           ),
