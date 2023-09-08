@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class TilE extends StatelessWidget {
   final String tex;
   const TilE({super.key, required this.tex});
@@ -29,7 +28,9 @@ class TilE extends StatelessWidget {
           const SizedBox(
             width: 40,
           ),
-          Text(tex,style: ,),
+          Text(
+            tex,
+          ),
         ],
       ),
     );

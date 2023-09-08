@@ -1,6 +1,5 @@
 import 'dart:math';
 import 'package:nickname_generator/custom%20widgets/tile.dart';
-
 import 'nicknames.dart';
 import 'package:flutter/material.dart';
 
@@ -30,6 +29,14 @@ class _MainAppState extends State<MainApp> {
     return Scaffold(
       body: Column(
         children: [
+          const SizedBox(
+            height: 3,
+          ),
+          const Text(
+            'NICK-GEN',
+            style: TextStyle(
+                color: Colors.white, fontSize: 30, fontWeight: FontWeight.w100),
+          ),
           const SizedBox(
             height: 70,
           ),
